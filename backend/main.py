@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from core.config import Settings
+from core.config import settings
 
-app = FastAPI(title = Settings.PROJECT_FILE, version = Settings.PROJECT_VERSION)
+app = FastAPI(title = settings.PROJECT_FILE, version = settings.PROJECT_VERSION)
 
 @app.get("/")
 def hello_api():
